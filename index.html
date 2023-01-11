@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homer Butt</title>
+  </head>
+  <style>
+    .img_container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #img {
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="img_container">
+      <img
+        id="img"
+        onclick="handleOnClick()"
+        src="./Assets/butt.webp"
+        alt="homer butt"
+      />
+      <audio id="audio" src=""></audio>
+    </div>
+  </body>
+
+  <script>
+    const handleOnClick = () => {
+      const audio = document.getElementById("audio");
+      const randNum = Math.floor(Math.random() * 10) + 1;
+      audio.src = `./Assets/${randNum}.wav`;
+      audio.play();
+    };
+  </script>
+</html>
